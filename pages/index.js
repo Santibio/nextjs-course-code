@@ -1,9 +1,14 @@
 import { getFeaturedEvents } from '../helpers/api-util';
 import EventList from '../components/events/event-list';
+import Head from 'next/head';
 
 function HomePage(props) {
   return (
     <div>
+      <Head>
+        <title>Events</title>
+        <meta name='Events' description="Events description" />
+      </Head>
       <EventList items={props.events} />
     </div>
   );
